@@ -56,6 +56,8 @@ void setup() {
   wdt_enable(WDTO_2S);
   wdt_reset();
 
+  // pinMode intentionally skipped so we power via pull-up! 
+
   // Disable components to save power
   power_adc_disable();
   power_spi_disable();
