@@ -2,8 +2,6 @@
 #define _TASK_SLEEP_ON_IDLE_RUN  // Power saving when nothing to do
 
 #include <avr/wdt.h>
-#include <avr/sleep.h>
-#include <avr/power.h>
 #include <TaskScheduler.h>
 #include <Mouse.h>
 
