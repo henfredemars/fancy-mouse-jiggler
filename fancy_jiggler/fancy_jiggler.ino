@@ -44,8 +44,7 @@ void blink_f() {
 void jiggle_f() {
   static int parity = -1;
 
-  activity_blink_task.setIterations(4);
-  activity_blink_task.enable();
+  activity_blink_task.restart();
   Mouse.move(parity, 0, 0);
   parity *= -1;
   
@@ -56,7 +55,7 @@ void setup() {
   wdt_enable(WDTO_2S);
   wdt_reset();
 
-  // pinMode intentionally skipped so we power via pull-up! 
+  // pinMode intentionally skipped so we power via pull-up!
 
   // Disable components to save power
   power_adc_disable();
